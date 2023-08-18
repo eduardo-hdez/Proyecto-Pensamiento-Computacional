@@ -1,6 +1,6 @@
 # Traductor de código Morse
 
-## Contexto**
+## Contexto
 
 El código Morse es un sistema de codificación de caracteres alfabéticos y numéricos que utiliza secuencias de señales, generalmente en forma de pulsos eléctricos, sonidos o luces, para transmitir mensajes a través de largas distancias. Fue desarrollado por Samuel Morse y Alfred Vail en la década de 1830 y desempeñó un papel crucial en las comunicaciones durante más de un siglo.
 
