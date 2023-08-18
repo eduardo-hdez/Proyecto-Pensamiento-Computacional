@@ -7,3 +7,6 @@ El código Morse es un sistema de codificación de caracteres alfabéticos y num
 El código Morse fue desarrollado para usar el telégrafo, un dispositivo ideado también por Samuel Morse en 1832. Era un sistema de comunicación que permite transmitir mensajes a larga distancia mediante la codificación y envío de señales. Emplea un dispositivo llamado "transmisor" que convierte los mensajes en señales eléctricas, y un "receptor" que recupera las señales y las traduce nuevamente en mensajes legibles. (Parra, 2023)
 
 Parra, S. (2023). _"Código Morse: ¿qué es, cómo funciona y qué tiene que ver con el Titanic?"_. National Geographic España. https://www.nationalgeographic.com.es/ciencia/codigo-morse-que-es-como-funciona-que-tiene-que-ver-titanic_19830
+
+
+Este programa es un traductor de código morse que pide al usuario un mensaje en español o inglés y lo traduce instántaneamente a código morse, igualmente, el usuario puede ingresar un código morse y puede traducirlo al idioma inglés o al idioma español. Se me hizo interesante proponerme este reto de programa ya que he querido aprenderme de memorio el código morse y además, siento que es una necesidad saberlo de memoria por algún día necesitamos de este cuando estemos en alguna situación complicada y requeramos de él.
