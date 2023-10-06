@@ -4,38 +4,75 @@ letras en el alfabeto en español en listas para luego ser usadas más adelante
 """
 
 def datos():
-    codigo_morse = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
-                    "..", ".---", "-.-", ".-..", "--", "-.", "--.--" "---",
-                    ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--",
-                    "-..-", "-.--", "--.."]
+    codigo_morse_letras = [
+        [".-", "A"], ["-...", "B"], ["-.-.", "C"], ["-..", "D"], [".", "E"],
+        ["..-.", "F"], ["--.", "G"], ["....", "H"], ["..", "I"], [".---", "J"],
+        ["-.-", "K"], [".-..", "L"], ["--", "M"], ["-.", "N"], ["---", "O"],
+        [".--.", "P"], ["--.-", "Q"], [".-.", "R"], ["...", "S"], ["-", "T"],
+        ["..-", "U"], ["...-", "V"], [".--", "W"], ["-..-", "X"], ["-.--", "Y"],
+        ["--..", "Z"]]
     
-    letras_espanol = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
-                      "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U",
-                      "V", "W","X", "Y", "Z"]
-    
-    return codigo_morse, letras_espanol
+    codigo_morse_especiales = [
+        [".----", "1"], ["..---", "2"], ["...--", "3"], ["....-", "4"],
+        [".....", "5"], ["-....", "6"], ["--...", "7"], ["---..", "8"],
+        ["----.", "9"], ["-----", "0"], [".-.-.-", "."], ["--..--", ","],
+        ["..--..", "?"], [".----.", "'"], ["-.-.--", "!"], ["-..-.", "/"],
+        ["-.--.", "("], ["-.--.-", ")"], [".-...", "&"], ["---...", ":"],
+        ["-.-.-.", ";"], ["-...-", "="], [".-.-.", "+"], ["-....-", "-"],
+        ["..--.-", "_"], [".-..-.", '"'], ["...-..-", "$"], [".--.-.", "@"]]
+
+    return codigo_morse_letras, codigo_morse_especiales
 
 """
-En esta función, se hace la traducción de texto a código morse usando un ciclo
-"for" y con la ayuda de las funciones upper() y strip() para que el texto
-ingresado por el usuario no limite a este a escribir su texto de una manera
-en la yo le indique. Esto hace que el usuario pueda tener más libertad a la
-hora de escribir su texto y traducirlo a código morse.
+En estas dos funciones, se hace la traducción de texto a código morse y de 
+texto a código morseusando un ciclo "for" y con la ayuda de las funciones 
+upper() y strip() para que el texto ingresado por el usuario no limite a 
+este a escribir su texto de una manera en la yo le indique. Esto hace que 
+el usuario pueda tener más libertad a la hora de escribir su texto y 
+traducirlo a código morse y viceversa.
 """
 
 def traduccion_texto(palabra):
-    codigo_morse, letras_espanol = datos()
+    codigo_morse_letras, codigo_morse_especiales = datos()
 
     texto = ""
     
     for x in palabra.upper():
         if x == " ":
             texto = texto + "/"
-        elif x in letras_espanol:
-            i = letras_espanol.index(x)
-            letras_morse = codigo_morse[i]
-            texto = texto + letras_morse + " "
+        else:
+            for morse, letra in codigo_morse_letras:
+                if letra == x:
+                    texto = texto + morse + " "
+                    break
+            else:
+                for morse, caracter in codigo_morse_especiales:
+                    if caracter == x:
+                        texto = texto + morse + " "
+                        break
 
+    return texto.strip()
+
+def traduccion_morse(texto_morse):
+    codigo_morse_letras, codigo_morse_especiales = datos()
+    
+    palabras = texto_morse.split("/")
+    texto = ""
+    
+    for palabra_morse in palabras:
+        letras_morse = palabra_morse.strip().split()
+        for letra_morse in letras_morse:
+            for morse, letra in codigo_morse_letras:
+                if letra_morse == morse:
+                    texto = texto + letra
+                    break
+            else:
+                for morse, caracter in codigo_morse_especiales:
+                    if caracter == morse:
+                        texto = texto + caracter
+                        break
+        texto = texto + " "
+    
     return texto.strip()
 
 """
@@ -52,7 +89,7 @@ def menu():
     while True:
         print(" \nMenú:")
         print("1) Traductor de Texto a Código Morse")
-        print("2) Traductor de Código Morse a Texto (Aún no está listo)")
+        print("2) Traductor de Código Morse a Texto")
         print("3) Salir \n")
 
         opcion = input("Elija una opción del 1 al 3: ")
@@ -60,14 +97,16 @@ def menu():
         if opcion == "1":
             frase = input("Ingrese un texto en español: ")
             morse = traduccion_texto(frase)
-            print("La traducción del texto a código morse es:\n", morse)
+            print("La traducción del texto a código Morse es:\n", morse)
         elif opcion == "2":
-            print("¡Error! Esta opción aún no está disponible.")
+            morse = input("Ingrese un código Morse: ")
+            texto = traduccion_morse(morse)
+            print("La traducción de código Morse a texto es:\n", texto)
         elif opcion == "3":
             print("¡Adiós! Gracias por usar este programa.")
             break
         else:
             print("Opción incorrecta. INTENTE DE NUEVO.")
 
-
 menu()
+
