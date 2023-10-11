@@ -135,7 +135,7 @@ def menu():
         opcion = input("Elija una opción del 1 al 3: ")
 
         if opcion == "1":
-            frase = input("Ingrese un texto en español: ")
+            frase = input("Ingrese un texto: ")
             morse = traduccion_texto(frase)
             print("La traducción del texto a código Morse es:\n", morse)
         elif opcion == "2":
