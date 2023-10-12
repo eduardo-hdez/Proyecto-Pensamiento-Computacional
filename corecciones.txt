@@ -62,6 +62,15 @@ Sub-Competencia:
 Error original: Aunque el codigo si tenía un ciclo while, estos están todo 
 		el tiempo activos ya que solo es un while true. Por lo que no
 		hay opción para salir del código una vez ingresada una opción.
+		
+		qst = int(input("""Introduzca el número de opción que desee usar:
+
+		while True:
+		qst = int(input("""Introduzca el número de opción que desee usar:
+		1. Texto a código Morse
+		2. Código Morse a texto
+		3. Salir del programa
+		"""))
 
 Cambio realizado: Incorporé la pregunta dentro del ciclo while donde el usuario 
 		  tiene que ingresar un input para que en cada ciclo el usuario
