@@ -129,8 +129,8 @@ def suma_morse():
     convertido en código morse con la función "traduccion_texto(palabra)".
     """
     
-    numero1 = int(input("Ingrese el primer número: "))
-    numero2 = int(input("Ingrese el segundo número: "))
+    numero1 = float(input("Ingrese el primer número: "))
+    numero2 = float(input("Ingrese el segundo número: "))
 
     suma_str = str(numero1 + numero2)
     morse_suma = traduccion_texto(suma_str)
@@ -147,8 +147,8 @@ def multiplicacion_morse():
     "traduccion_texto(palabra)".
     """
     
-    numero1 = int(input("Ingrese el primer número: "))
-    numero2 = int(input("Ingrese el segundo número: "))
+    numero1 = float(input("Ingrese el primer número: "))
+    numero2 = float(input("Ingrese el segundo número: "))
 
     mult_str = str(numero1 * numero2)
     morse_mult = traduccion_texto(mult_str)
@@ -165,8 +165,8 @@ def division_morse():
     "traduccion_texto(palabra)"
     """
     
-    numero1 = int(input("Ingrese el primer número: "))
-    numero2 = int(input("Ingrese el segundo número: "))
+    numero1 = float(input("Ingrese el primer número: "))
+    numero2 = float(input("Ingrese el segundo número: "))
 
     div_str = str(numero1 / numero2)
     morse_div = traduccion_texto(div_str)
