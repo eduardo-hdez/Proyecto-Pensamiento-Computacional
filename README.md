@@ -9,3 +9,9 @@ El código Morse fue desarrollado para usar el telégrafo, un dispositivo ideado
 Parra, S. (2023). _"Código Morse: ¿qué es, cómo funciona y qué tiene que ver con el Titanic?"_. National Geographic España. https://www.nationalgeographic.com.es/ciencia/codigo-morse-que-es-como-funciona-que-tiene-que-ver-titanic_19830
 
 Este programa es un traductor de código morse que pide al usuario un texto y lo traduce instántaneamente a código morse, igualmente, el usuario puede ingresar un código morse y puede traducirlo a un texto. Se me hizo interesante proponerme este reto de programa ya que he querido aprenderme de memoria el código morse y además, siento que es una necesidad saberlo de memoria por si algún día necesitamos de este cuando estemos en alguna situación complicada y requeramos de él.
+
+
+## Biblioteca usada
+
+La biblioteca que usé en mi Proyecto Libre es la de "random". Donde el módulo implementa generadores de números pseudoaleatorios para varias distribuciones.
+Esta biblioteca es usada en mi proyecto mediante haciendo el uso de la función "random.choice()", dentro de esta función tengo un lista de elementos strings donde guardo diferentes frases de despidadas hacia el usuario, cuando este sale del programa. 
