@@ -1,0 +1,136 @@
+=================================== Avance 2 =================================
+
+Sub-Competencia:
+	componente: usa operadores aritméticos de manera eficaz
+
+Error original: Subí el archivo .py pero no había nada que me pudiera evaluar
+		debido a que considere que no era necesaro utilizar operadores
+		aritméticos.
+			
+Cambio realizado: Corregí esto y al terminar mi proyecto agregué 3 nuevas
+		  funciones donde hago el uso de operadores de suma,
+		  multiplicación y división.
+
+		  def suma_morse ()
+
+		  def mult_morse()
+
+		  def div_morse()
+
+		 
+Líneas de código donde se ve la corrección:
+
+		  122 a 137 suma morse
+		
+		  139 a 155 multiplicacion morse
+
+		  157 a 173 division morse
+
+================================== Avance 3 ==================================
+
+Sub-Competencia:
+	Separa el código en funciones pequeñas reusables, haciendo uso correcto
+	de paso por parametros y return
+
+Error original: El codigo no compilaba, no tenía la funcion esperada ya que no 
+		importa que input le des, el output del codigo 
+		siempre es "None".
+
+Cambio realizado: Generé las siguientes 4 funciones donde todo mi programa se 
+		  basa en
+
+		  def datos()
+	          
+                  def traduccion_texto(palabra)
+
+		  def traduccion_morse(texto_morse)
+
+		  def menu()
+
+Líneas de código donde se ve la corrección: 
+
+	13 a 41 datos
+	47 a 87 traduccion texto
+	80 a 113 traduccion morse 
+	119 a 153 menu
+
+================================== Avance 5 ==================================
+
+Sub-Competencia:
+	Aplica estructuras cíclicas para resolver un problema de manera eficiente 
+
+Error original: Aunque el codigo si tenía un ciclo while, estos están todo 
+		el tiempo activos ya que solo es un while true. Por lo que no
+		hay opción para salir del código una vez ingresada una opción.
+		
+		qst = int(input("""Introduzca el número de opción que desee usar:
+
+		while True:
+		qst = int(input("""Introduzca el número de opción que desee usar:
+		1. Texto a código Morse
+		2. Código Morse a texto
+		3. Salir del programa
+		"""))
+
+Cambio realizado: Incorporé la pregunta dentro del ciclo while donde el usuario 
+		  tiene que ingresar un input para que en cada ciclo el usuario
+		  puede salir del programa:
+		  
+		  while True:
+                      print(" \nMenú:")
+                      print("1) Traductor de Texto a Código Morse")
+                      print("2) Traductor de Código Morse a Texto")
+                      print("3) Salir \n")
+
+                      opcion = input("Elija una opción del 1 al 3: ")
+
+                      if opcion == "1":
+                          frase = input("Ingrese un texto: ")
+                          morse = traduccion_texto(frase)
+                          print("La traducción del texto a código Morse es:\n", morse)
+                      elif opcion == "2":
+                          morse = input("(ÚNICAMENTE INGRESE LETRAS)"
+                                        "\n(Separe cada código morse con un espacio)"
+                                        "\nIngrese un código Morse: ")
+                          texto = traduccion_morse(morse)
+                          print("La traducción de código Morse a texto es:\n", texto)
+                      elif opcion == "3":
+                          print("¡Adiós! Gracias por usar este programa.")
+                          break
+                      else:
+                          print("Opción incorrecta. INTENTE DE NUEVO.")
+
+Líneas de código donde se ve la corrección: 129 a 151
+
+====================================== PEP 8 =================================
+
+Sub-Competencia:
+	El estilo cumple con las normas y estándares enunciadas en el documento de PEP 8 
+
+Error original: Le faltaban algunas normas y estándares sobre el documento de PEP 8
+			
+Cambio realizado: La normas y estándores del PEP 8 ya son implementadas en todo el código
+		 
+Líneas de código donde se ve la corrección: Todo el programna
+
+================================== API de Python =============================
+
+Sub-Comptencia:
+	Incorpora y explica nuevas funciones en su progra e incluya su referencias
+ 	al API de pythoon.
+
+Error original: No habia incorpardo una biblioteca a mi proyecto.
+			
+Cambio realizado: Incorporé la biblioteca "Random" de Python para que cuando el usuario
+		  cierra el programa, le aparezca un mensaje de despedida aleatorio.
+
+		   elif opcion == "6":
+            	       despedidas = ["¡Adiós!", "¡Hasta luego!",
+                                     "¡Adiós, que tengas un buen día!",
+                                     "¡Hasta la vista!",
+                                     "Gracias por usar este programa.",
+                                     "¡Hasta siempre!"]
+                       print(random.choice(despedidas)) #Mensaje de despedida aleatorio
+                       break
+		 
+Líneas de código donde se ve la corrección: 226 a 233
