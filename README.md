@@ -14,4 +14,4 @@ Este programa es un traductor de código morse que pide al usuario un texto y lo
 ## Biblioteca usada
 
 La biblioteca que usé en mi Proyecto Libre es la de "random". Donde el módulo implementa generadores de números pseudoaleatorios para varias distribuciones.
-Esta biblioteca es usada en mi proyecto mediante haciendo el uso de la función "random.choice()", dentro de esta función tengo un lista de elementos strings donde guardo diferentes frases de despidadas hacia el usuario, cuando este sale del programa. 
+Esta biblioteca es usada en mi proyecto, mediante haciendo el uso de la función "random.choice()", dentro de esta función tengo un lista de elementos strings donde guardo diferentes frases de despedidas hacia el usuario, cuando este sale del programa. 
